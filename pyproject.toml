@@ -1,0 +1,31 @@
+[project]
+name = "intentkit"
+version = "0.1.0"
+description = "Few-shot, multilingual intent detection with SetFit — train on a handful of examples, classify in 50+ languages"
+readme = "README.md"
+authors = [
+    { name = "Berk Gokden", email = "berkgokden@gmail.com" }
+]
+requires-python = ">=3.11"
+license = "MIT"
+keywords = ["setfit", "intent-detection", "intent-classification", "nlp", "multilingual", "few-shot", "sentence-transformers"]
+dependencies = [
+    "datasets>=5.1.0",
+    "sentence-transformers>=6.1.0",
+    "setfit>=1.1",
+]
+
+[project.scripts]
+intentkit = "intentkit.cli:main"
+
+[project.urls]
+Repository = "https://github.com/bgokden/intentkit"
+
+[build-system]
+requires = ["uv_build>=0.9.28,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
